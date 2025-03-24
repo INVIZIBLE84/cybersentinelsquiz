@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phishing Quiz - 3D Style</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="quiz-box">
+            <h1>🚨Cyber Sentinels Phishing Quiz🚨</h1>
+            <h2><p><b>Defuse the digital bomb by answering the questions...</b></p></h2>
+            <button id="start-btn" class="btn">Start Quiz</button>
+            <div id="timer">⏳Time: 02:00⏳</div>
+        </div>
+        
+        <div id="quiz-screen" class="quiz-box" style="display: none;">
+            <h1>🚨 Phishing Quiz 🚨</h1>
+            <div id="question-container">
+                <div id="question">Loading question...</div>
+                <div id="options"></div>
+            </div>
+            <button id="next-btn" class="btn">Next</button>
+            <div id="result"></div>
+        </div>
+    </div>
+    <audio id="background-audio" loop>
+        <source src="sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>

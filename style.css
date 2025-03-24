@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('giffy.gif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+
+.container {
+    perspective: 1000px;
+}
+
+.quiz-box {
+    background: #333;
+    padding: 70px; /* Increased padding */
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(48, 48, 48, 0.5);
+    width: 100%;
+    max-width: 1000px; /* Increased width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect: Scale up slightly and add a glowing shadow */
+.quiz-box:hover {
+    transform: scale(1.02); /* Slightly enlarge the container */
+    box-shadow: 0px 20px 40px 20px rgba(56, 165, 56, 0.532); /* Add a red glow effect */
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px; /* Increased font size */
+    margin-bottom: 20px;
+    color: #ecd504;
+}
+
+#question {
+    font-size: 22px; /* Increased font size */
+    margin-bottom: 20px;
+    line-height: 1.5; /* Improved readability */
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+}
+
+.option {
+    background: linear-gradient(145deg, #424242, #2a2a2a);
+    color: #fff;
+    padding: 15px; /* Increased padding */
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    font-size: 20px; /* Increased font size */
+}
+
+.option:hover {
+    background: #0c7b0091;
+    transform: translateY(-3px);
+}
+
+.option:active {
+    transform: translateY(0);
+}
+
+.btn {
+    display: block;
+    margin: 20px auto; /* Centers the button horizontally */
+    text-align: center;
+    padding: 15px; /* Increased padding */
+    background: #00fd08;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease, transform 0.2s;
+    font-size: 18px; /* Increased font size */
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+    background: #45a049;
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#timer {
+    font-size: 28px; /* Increased font size */
+    text-align: center;
+    color: #970000;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Bomb Image */
+#bomb-image {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Explosion Effect */
+.blast-screen {
+    background-color: red;
+    color: white;
+    animation: flash 0.5s infinite;
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
